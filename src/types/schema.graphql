@@ -1,0 +1,30 @@
+scalar Email
+scalar URL
+scalar DateTime
+scalar Username
+scalar Password
+scalar UUID
+scalar JSON
+
+schema {
+  query: Query
+  mutation: Mutation
+  subscription: Subscription
+}
+
+type Mutation {
+  signIn (input: SignInInput!): Token
+  signUp (input: SignUpInput!): Token
+  forgotPassword (input: ForgotPasswordInput!): Boolean
+  resetPassword (input: ResetPasswordInput!): Boolean 
+  updateUser (input: UpdateUserInput!): User
+}
+
+type Query {
+  viewer: User 
+  logs: [Log]
+}
+
+type Subscription {
+  userUpdated(id: ID!): User
+}

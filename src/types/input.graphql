@@ -1,0 +1,26 @@
+input SignUpInput {
+  name: String
+  email: Email!
+  password: Password!
+}
+
+input SignInInput {
+  email: Email!
+  password: Password!
+}
+
+input ForgotPasswordInput {
+  email: Email! 
+}
+
+input ResetPasswordInput {
+  token: String!
+  password: Password!
+}
+
+input UpdateUserInput {
+  name: String
+  email: Email 
+  password: Password!
+  newPassword: Password
+}

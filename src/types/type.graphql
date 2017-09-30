@@ -1,0 +1,27 @@
+type User {
+  _id: ID!
+  name: String
+  email: Email!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  canUpdate: Boolean!
+  canDelete: Boolean!
+  isAdmin: Boolean!
+}
+
+type Token {
+  token: String!
+}
+
+type Log {
+  _id: ID!
+  pid: Int
+  hostname: String
+  level: Int
+  time: Float
+  msg: String!
+  req: JSON
+  res: JSON
+  responseTime: Int
+  v: Int
+}

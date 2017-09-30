@@ -1,0 +1,8 @@
+{
+  "ext": "js json graphql",
+  "ignore": ["*.test.js", "fixtures/*"],
+  "watch": ["src"],
+  "execMap": {
+    "js": "node --harmony"
+  }
+}
